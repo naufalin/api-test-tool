@@ -1,0 +1,16 @@
+{
+  "url": "https://jsonplaceholder.typicode.com/posts",
+  "method": "GET",
+  "requests": 20,
+  "timeout": 30,
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer your-token-here",
+    "User-Agent": "API-Stress-Tester/1.0"
+  },
+  "data": {
+    "title": "Test Post",
+    "body": "This is a test post for API stress testing",
+    "userId": 1
+  }
+}
