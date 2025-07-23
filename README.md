@@ -20,14 +20,14 @@ A simple, user-friendly tool to stress test any API endpoint with concurrent req
    pip install aiohttp
    ```
 
-3. **Download the script** and save as `api_stress_test.py`
+3. **Download the script** and save as `main.py`
 
 ## 🚀 How to Use
 
 ### Option 1: Interactive Mode (Easiest)
 Just run the script and follow the prompts:
 ```bash
-python api_stress_test.py
+python main.py
 ```
 
 The script will ask you:
@@ -41,30 +41,30 @@ The script will ask you:
 ### Option 2: Command Line Arguments
 For quick testing:
 ```bash
-python api_stress_test.py --url "https://api.example.com/users" --requests 50 --timeout 30
+python main.py --url "https://api.example.com/users" --requests 50 --timeout 30
 ```
 
 ### Option 3: Configuration File
 Create a JSON config file (see example below) and use:
 ```bash
-python api_stress_test.py --config my_test.json
+python main.py --config my_test.json
 ```
 
 ## 📝 Examples
 
 ### Testing a GET endpoint:
 ```bash
-python api_stress_test.py --url "https://jsonplaceholder.typicode.com/posts" --requests 20 --method GET
+python main.py --url "https://jsonplaceholder.typicode.com/posts" --requests 20 --method GET
 ```
 
 ### Testing a POST endpoint with data:
 ```bash
-python api_stress_test.py --url "https://api.example.com/users" --method POST --data '{"name":"John","email":"john@example.com"}' --requests 10
+python main.py --url "https://api.example.com/users" --method POST --data '{"name":"John","email":"john@example.com"}' --requests 10
 ```
 
 ### Using headers (like authentication):
 ```bash
-python api_stress_test.py --url "https://api.example.com/protected" --headers '{"Authorization":"Bearer your-token"}' --requests 5
+python main.py --url "https://api.example.com/protected" --headers '{"Authorization":"Bearer your-token"}' --requests 5
 ```
 
 ## ⚙️ Configuration File Format
@@ -131,26 +131,26 @@ The tool provides comprehensive results:
 ### 1. **Load Testing**
 Test how many concurrent users your API can handle:
 ```bash
-python api_stress_test.py --url "https://your-api.com/endpoint" --requests 100
+python main.py --url "https://your-api.com/endpoint" --requests 100
 ```
 
 ### 2. **Performance Benchmarking**
 Measure response times under different loads:
 ```bash
-python api_stress_test.py --url "https://your-api.com/endpoint" --requests 10  # Light load
-python api_stress_test.py --url "https://your-api.com/endpoint" --requests 100 # Heavy load
+python main.py --url "https://your-api.com/endpoint" --requests 10  # Light load
+python main.py --url "https://your-api.com/endpoint" --requests 100 # Heavy load
 ```
 
 ### 3. **Authentication Testing**
 Test authenticated endpoints:
 ```bash
-python api_stress_test.py --url "https://api.example.com/protected" --headers '{"Authorization":"Bearer token123"}' --requests 20
+python main.py --url "https://api.example.com/protected" --headers '{"Authorization":"Bearer token123"}' --requests 20
 ```
 
 ### 4. **Different HTTP Methods**
 Test POST, PUT, DELETE endpoints:
 ```bash
-python api_stress_test.py --url "https://api.example.com/users" --method POST --data '{"name":"Test User"}' --requests 15
+python main.py --url "https://api.example.com/users" --method POST --data '{"name":"Test User"}' --requests 15
 ```
 
 ## 📁 Output Files
