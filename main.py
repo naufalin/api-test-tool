@@ -3,11 +3,11 @@ General API Stress Testing Tool
 ===============================
 
 How to run:
-    python api_stress_test.py
+    python main.py
     
 Follow the interactive prompts to configure your test, or use command line arguments:
     
-    python api_stress_test.py --url "https://api.example.com/endpoint" --method GET --requests 50 --timeout 30
+    python main.py --url "https://api.example.com/endpoint" --method GET --requests 50 --timeout 30
     
 Available arguments:
     --url: API endpoint URL
@@ -112,9 +112,9 @@ class APIStressTester:
             formatter_class=argparse.RawDescriptionHelpFormatter,
             epilog="""
 Examples:
-  python api_stress_test.py --url "https://jsonplaceholder.typicode.com/posts" --requests 20
-  python api_stress_test.py --config my_test_config.json
-  python api_stress_test.py --url "https://api.example.com/users" --method POST --data '{"name":"John"}'
+  python main.py --url "https://jsonplaceholder.typicode.com/posts" --requests 20
+  python main.py --config my_test_config.json
+  python main.py --url "https://api.example.com/users" --method POST --data '{"name":"John"}'
             """
         )
         
