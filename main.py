@@ -340,8 +340,9 @@ Examples:
             f.write("-" * 30 + "\n")
             
             for result in self.results:
+                status_str = str(result.get('status_code', 'ERR'))
                 f.write(f"Request {result['request_num']:2d}: "
-                       f"Status={result.get('status_code', 'ERR'):3s}, "
+                       f"Status={status_str:>3s}, "
                        f"Duration={result['duration_s']:6.2f}s, "
                        f"Success={result['success']}\n")
                 
